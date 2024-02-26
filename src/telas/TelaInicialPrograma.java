@@ -40,6 +40,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRGrupoDeTributacao = new javax.swing.JRadioButton();
         jRCest = new javax.swing.JRadioButton();
         jRNcm = new javax.swing.JRadioButton();
+        jRCst = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         jREstoque = new javax.swing.JRadioButton();
         jRLote = new javax.swing.JRadioButton();
@@ -185,23 +186,30 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRNcm.setSelected(true);
         jRNcm.setText("Ncm");
 
+        jRCst.setFont(new java.awt.Font("Dialog", 0, 17)); // NOI18N
+        jRCst.setSelected(true);
+        jRCst.setText("Cst");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jRGrupoDeTributacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jRGrupoDeTributacao, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
             .addComponent(jRCest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jRNcm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jRCst, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jRCst)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRNcm)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRCest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRGrupoDeTributacao)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -333,6 +341,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRFabricante.setSelected(false);
         jRFornecedores.setSelected(false);
         jRClientes.setSelected(false);
+        jRCst.setSelected(false);
         jRNcm.setSelected(false);
         jRCest.setSelected(false);
         jRGrupoDeTributacao.setSelected(false);
@@ -365,6 +374,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 || jRFabricante.isSelected()
                 || jRFornecedores.isSelected()
                 || jRClientes.isSelected()
+                || jRCst.isSelected()
                 || jRNcm.isSelected()
                 || jRCest.isSelected()
                 || jRGrupoDeTributacao.isSelected()
@@ -420,6 +430,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
     public static javax.swing.JRadioButton jRCategorias;
     public static javax.swing.JRadioButton jRCest;
     public static javax.swing.JRadioButton jRClientes;
+    public static javax.swing.JRadioButton jRCst;
     public static javax.swing.JRadioButton jREstoque;
     public static javax.swing.JRadioButton jRFabricante;
     public static javax.swing.JRadioButton jRFornecedores;

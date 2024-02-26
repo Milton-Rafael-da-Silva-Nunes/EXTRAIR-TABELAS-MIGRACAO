@@ -20,6 +20,7 @@ import static telas.TelaInicialPrograma.jRGrupoDeTributacao;
 import static telas.TelaInicialPrograma.jRReceber;
 import static telas.TelaInicialPrograma.jRPagar;
 import static telas.TelaInicialPrograma.jRPagamento;
+import static telas.TelaInicialPrograma.jRCst;
 
 /**
  *
@@ -55,6 +56,9 @@ public class ExtrairTabelasSelecionadasDumpSql {
             }
             if (jRClientes.isSelected()) {
                 comando.append(" cliente");
+            }
+            if(jRCst.isSelected()) {
+                comando.append(" cst");
             }
             if (jRNcm.isSelected()) {
                 comando.append(" ncm");
