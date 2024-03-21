@@ -21,6 +21,8 @@ import static telas.TelaInicialPrograma.jRReceber;
 import static telas.TelaInicialPrograma.jRPagar;
 import static telas.TelaInicialPrograma.jRPagamento;
 import static telas.TelaInicialPrograma.jRCst;
+import static telas.TelaInicialPrograma.jRConvenio;
+import static telas.TelaInicialPrograma.jREmpresa;
 
 /**
  *
@@ -86,6 +88,13 @@ public class ExtrairTabelasSelecionadasDumpSql {
             }
             if (jRPagamento.isSelected()) {
                 comando.append(" pagamento");
+            }
+            if(jRConvenio.isSelected()) {
+                comando.append(" convenio");
+                comando.append(" conveniocliente");
+            }
+            if(jREmpresa.isSelected()) {
+                comando.append(" empresa");
             }
 
             comando.append(" > C:\\1-TABELAS\\TabelasParaImportação.sql");
