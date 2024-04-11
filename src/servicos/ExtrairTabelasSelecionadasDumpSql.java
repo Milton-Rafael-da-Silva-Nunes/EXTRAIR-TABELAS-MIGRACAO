@@ -2,7 +2,8 @@ package servicos;
 
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import static servicos.LerArquivoDeLoginBancoDeDados.banco;
+import static servicos.LerArquivoDeLoginBancoDeDados.dataBase;
+import static servicos.LerArquivoDeLoginBancoDeDados.ip;
 import static servicos.LerArquivoDeLoginBancoDeDados.senha;
 import static servicos.LerArquivoDeLoginBancoDeDados.usuario;
 import static telas.TelaInicialPrograma.jRProdutos;
@@ -23,6 +24,7 @@ import static telas.TelaInicialPrograma.jRPagamento;
 import static telas.TelaInicialPrograma.jRCst;
 import static telas.TelaInicialPrograma.jRConvenio;
 import static telas.TelaInicialPrograma.jREmpresa;
+import static telas.TelaInicialPrograma.jRUsuario;
 
 /**
  *
@@ -35,77 +37,76 @@ public class ExtrairTabelasSelecionadasDumpSql {
     }
 
     private void tabelasSelecionadas() throws IOException {
-        try {
-            StringBuilder comando = new StringBuilder("cmd.exe /c mysqldump --host=localhost --user=" + usuario + " --password=" + senha + " " + banco);
 
-            if (jRProdutos.isSelected()) {
-                comando.append(" produto");
-            }
-            if (jRUnidades.isSelected()) {
-                comando.append(" unidade");
-            }
-            if (jRCategorias.isSelected()) {
-                comando.append(" categoria");
-            }
-            if (jRSubcategorias.isSelected()) {
-                comando.append(" subcategoria");
-            }
-            if (jRFabricante.isSelected()) {
-                comando.append(" fabricante");
-            }
-            if (jRFornecedores.isSelected()) {
-                comando.append(" fornecedor");
-            }
-            if (jRClientes.isSelected()) {
-                comando.append(" cliente");
-            }
-            if(jRCst.isSelected()) {
-                comando.append(" cst");
-            }
-            if (jRNcm.isSelected()) {
-                comando.append(" ncm");
-            }
-            if (jRCest.isSelected()) {
-                comando.append(" cest");
-            }
-            if (jRGrupoDeTributacao.isSelected()) {
-                comando.append(" grupotributacao");
-            }
-            if (jREstoque.isSelected()) {
-                comando.append(" ajusteestoque");
-                comando.append(" estoquesaldo");
-                comando.append(" estoque");
-            }
-            if (jRLote.isSelected()) {
-                comando.append(" lote");
-                comando.append(" lotedet");
-            }
-            if (jRReceber.isSelected()) {
-                comando.append(" receber");
-            }
-            if (jRPagar.isSelected()) {
-                comando.append(" pagar");
-            }
-            if (jRPagamento.isSelected()) {
-                comando.append(" pagamento");
-            }
-            if(jRConvenio.isSelected()) {
-                comando.append(" convenio");
-                comando.append(" conveniocliente");
-            }
-            if(jREmpresa.isSelected()) {
-                comando.append(" empresa");
-            }
+        StringBuilder comando = new StringBuilder("cmd.exe /c mysqldump --host=" + ip + " --user=" + usuario + " --password=" + senha + " " + dataBase);
 
-            comando.append(" > C:\\1-TABELAS\\TabelasParaImportação.sql");
-
-            Runtime.getRuntime().exec(comando.toString());
-
-            JOptionPane.showMessageDialog(null, "<html>Tabelas extraídas com sucesso!<br><br>Caminho: <i>C:/1-TABELAS</i></html>",
-                    "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-
-        } catch (IOException e) {
-            throw new Exceptions(e.getMessage());
+        if (jRProdutos.isSelected()) {
+            comando.append(" produto");
         }
+        if (jRUnidades.isSelected()) {
+            comando.append(" unidade");
+        }
+        if (jRCategorias.isSelected()) {
+            comando.append(" categoria");
+        }
+        if (jRSubcategorias.isSelected()) {
+            comando.append(" subcategoria");
+        }
+        if (jRFabricante.isSelected()) {
+            comando.append(" fabricante");
+        }
+        if (jRFornecedores.isSelected()) {
+            comando.append(" fornecedor");
+        }
+        if (jRClientes.isSelected()) {
+            comando.append(" cliente");
+        }
+        if (jRCst.isSelected()) {
+            comando.append(" cst");
+        }
+        if (jRNcm.isSelected()) {
+            comando.append(" ncm");
+        }
+        if (jRCest.isSelected()) {
+            comando.append(" cest");
+        }
+        if (jRGrupoDeTributacao.isSelected()) {
+            comando.append(" grupotributacao");
+        }
+        if (jREstoque.isSelected()) {
+            comando.append(" ajusteestoque");
+            comando.append(" estoquesaldo");
+            comando.append(" estoque");
+        }
+        if (jRLote.isSelected()) {
+            comando.append(" lote");
+            comando.append(" lotedet");
+        }
+        if (jRReceber.isSelected()) {
+            comando.append(" receber");
+        }
+        if (jRPagar.isSelected()) {
+            comando.append(" pagar");
+        }
+        if (jRPagamento.isSelected()) {
+            comando.append(" pagamento");
+        }
+        if (jRConvenio.isSelected()) {
+            comando.append(" convenio");
+            comando.append(" conveniocliente");
+        }
+        if (jREmpresa.isSelected()) {
+            comando.append(" empresa");
+        }
+        if (jRUsuario.isSelected()) {
+            comando.append(" usuario");
+        }
+
+        comando.append(" > C:\\1-TABELAS\\TabelasParaImportação.sql");
+
+        Runtime.getRuntime().exec(comando.toString());
+
+        JOptionPane.showMessageDialog(null, "<html>Tabelas extraídas com sucesso!<br><br>Caminho: <i>C:/1-TABELAS</i></html>",
+                "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
     }
 }

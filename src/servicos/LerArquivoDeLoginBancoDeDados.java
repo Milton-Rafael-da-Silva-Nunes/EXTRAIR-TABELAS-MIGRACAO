@@ -12,34 +12,34 @@ import java.io.IOException;
  */
 public class LerArquivoDeLoginBancoDeDados {
 
-    public static String banco = "";
+    public static String dataBase = "";
     public static String senha = "";
     public static String usuario = "";
+    public static String ip = "";
+    public static String porta = "";
 
-    public static void dadosDeLoginBancoDeDados() throws FileNotFoundException {
-        System.out.println("Login banco!");
-        
-        String linha;
-
+    public void setarLoginBanco() throws FileNotFoundException, IOException {
         File file = new File(System.getProperty("user.dir") + "\\rede.txt");
 
         if (!file.exists()) {
-            System.out.println("Caminho não existe");
-
+            System.out.println("Arquivo rede.txt inexistente.");
         } else if (file.length() == 0) {
-            System.out.println("rede.txt esta em branco");
-
+            System.out.println("Arquivo rede.txt vazio.");
         } else {
 
-            try (FileReader fr = new FileReader(file);
-                    BufferedReader bf = new BufferedReader(fr)) {
+            String linha;
+            try (FileReader fileReader = new FileReader(file);
+                    BufferedReader reader = new BufferedReader(fileReader)) {
 
-                while ((linha = bf.readLine()) != null) {
+                while ((linha = reader.readLine()) != null) {
 
                     String[] split = linha.split(":");
 
+                    if (split[0].equalsIgnoreCase("IP")) {
+                        ip = (linha.split(":")[1]);
+                    }
                     if (split[0].equalsIgnoreCase("DB")) {
-                        banco = (linha.split(":")[1]);
+                        dataBase = (linha.split(":")[1]);
                     }
                     if (split[0].equalsIgnoreCase("USER")) {
                         usuario = (linha.split(":")[1]);
@@ -47,12 +47,11 @@ public class LerArquivoDeLoginBancoDeDados {
                     if (split[0].equalsIgnoreCase("KEY")) {
                         senha = (linha.split(":")[1]);
                     }
+                    if (split[0].equalsIgnoreCase("PORT")) {
+                        porta = (linha.split(":")[1]);
+                    }
                 }
-            } catch (FileNotFoundException e) {
-                throw new Exceptions("Arquivo rede.txt não encontrado!\n" + e.getMessage());
-            } catch (IOException ex) {
-                throw new Exceptions("Erro inesperado! \n" + ex.getMessage());
             }
         }
-    }
+    }    
 }

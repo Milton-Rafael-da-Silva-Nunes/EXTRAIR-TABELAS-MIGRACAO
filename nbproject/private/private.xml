@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/src/servicos/ExtrairTabelasSelecionadasDumpSql.java</file>
+            <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/src/servicos/VersaoSistemas.java</file>
             <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/src/telas/TelaInicialPrograma.java</file>
+            <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/src/aplicacao/main.java</file>
+            <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/rede.txt</file>
+            <file>file:/D:/PROGRAMAÇÃO/PROJETOS-LC/LC_EXTRACAO_TABELAS_MIGRACAO/src/servicos/LerArquivoDeLoginBancoDeDados.java</file>
         </group>
     </open-files>
 </project-private>

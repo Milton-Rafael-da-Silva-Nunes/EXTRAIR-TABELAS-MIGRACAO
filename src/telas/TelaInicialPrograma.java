@@ -38,6 +38,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRConvenio = new javax.swing.JRadioButton();
         jREmpresa = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
+        jRUsuario = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jRGrupoDeTributacao = new javax.swing.JRadioButton();
@@ -153,6 +154,9 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jLabel6.setText("_______________________");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jRUsuario.setFont(new java.awt.Font("Dialog", 0, 17)); // NOI18N
+        jRUsuario.setText("Usuarios");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -167,6 +171,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
             .addComponent(jRConvenio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jREmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jRUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,9 +193,11 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRConvenio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jREmpresa)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRUsuario)
+                .addContainerGap())
         );
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -235,7 +242,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 .addComponent(jRCest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRGrupoDeTributacao)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -398,6 +405,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRPagamento.setSelected(false);
         jRConvenio.setSelected(false);
         jREmpresa.setSelected(false);
+        jRUsuario.setSelected(false);
     }//GEN-LAST:event_btnLimparSelecoesActionPerformed
 
     private void btngerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngerarActionPerformed
@@ -432,7 +440,8 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 || jRPagar.isSelected()
                 || jRPagamento.isSelected()
                 || jRConvenio.isSelected()
-                || jREmpresa.isSelected()) {
+                || jREmpresa.isSelected()
+                || jRUsuario.isSelected()) {
             return true;
         } else {
             return false;
@@ -499,6 +508,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
     public static javax.swing.JRadioButton jRReceber;
     public static javax.swing.JRadioButton jRSubcategorias;
     public static javax.swing.JRadioButton jRUnidades;
+    public static javax.swing.JRadioButton jRUsuario;
     private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 }

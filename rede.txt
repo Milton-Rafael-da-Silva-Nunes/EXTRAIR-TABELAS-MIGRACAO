@@ -1,4 +1,4 @@
-IP:127.0.0.1
+IP:localhost
 DB:lc_sistemas
 USER:root
 KEY:03310103
