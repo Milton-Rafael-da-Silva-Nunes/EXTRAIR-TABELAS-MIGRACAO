@@ -39,6 +39,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jREmpresa = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         jRUsuario = new javax.swing.JRadioButton();
+        jRFidelidade = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jRGrupoDeTributacao = new javax.swing.JRadioButton();
@@ -157,6 +158,14 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRUsuario.setFont(new java.awt.Font("Dialog", 0, 17)); // NOI18N
         jRUsuario.setText("Usuarios");
 
+        jRFidelidade.setFont(new java.awt.Font("Dialog", 0, 17)); // NOI18N
+        jRFidelidade.setText("Fidelidade");
+        jRFidelidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRFidelidadeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -172,6 +181,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
             .addComponent(jREmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jRUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jRFidelidade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,6 +201,8 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 .addComponent(jRClientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jRFidelidade)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRConvenio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -406,6 +418,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
         jRConvenio.setSelected(false);
         jREmpresa.setSelected(false);
         jRUsuario.setSelected(false);
+        jRFidelidade.setSelected(false);
     }//GEN-LAST:event_btnLimparSelecoesActionPerformed
 
     private void btngerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngerarActionPerformed
@@ -421,6 +434,10 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "Error!", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btngerarActionPerformed
+
+    private void jRFidelidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRFidelidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRFidelidadeActionPerformed
 
     private boolean validarSelecoes() {
         if (jRProdutos.isSelected()
@@ -441,7 +458,8 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
                 || jRPagamento.isSelected()
                 || jRConvenio.isSelected()
                 || jREmpresa.isSelected()
-                || jRUsuario.isSelected()) {
+                || jRUsuario.isSelected()
+                || jRFidelidade.isSelected()) {
             return true;
         } else {
             return false;
@@ -497,6 +515,7 @@ public class TelaInicialPrograma extends javax.swing.JFrame {
     public static javax.swing.JRadioButton jREmpresa;
     public static javax.swing.JRadioButton jREstoque;
     public static javax.swing.JRadioButton jRFabricante;
+    public static javax.swing.JRadioButton jRFidelidade;
     public static javax.swing.JRadioButton jRFornecedores;
     public static javax.swing.JRadioButton jRGrupoDeTributacao;
     public static javax.swing.JRadioButton jRLocalEstoque;
