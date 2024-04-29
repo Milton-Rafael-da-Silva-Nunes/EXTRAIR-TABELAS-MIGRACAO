@@ -26,6 +26,7 @@ import static telas.TelaInicialPrograma.jRConvenio;
 import static telas.TelaInicialPrograma.jREmpresa;
 import static telas.TelaInicialPrograma.jRFidelidade;
 import static telas.TelaInicialPrograma.jRUsuario;
+import static telas.TelaInicialPrograma.jRPaciente;
 
 /**
  *
@@ -104,6 +105,9 @@ public class ExtrairTabelasSelecionadasDumpSql {
         }
         if(jRFidelidade.isSelected()) {
             comando.append(" fidelidade");
+        }
+        if(jRPaciente.isSelected()) {
+            comando.append(" pacientepbm");
         }
 
         comando.append(" > C:\\1-TABELAS\\TabelasParaImportação.sql");
